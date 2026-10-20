@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive Stone Paper Scissors game built with HTML, CSS and JavaScript.">
+  <title>Stone Paper Scissors Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game">
+    <header class="hero">
+      <p class="eyebrow">A classic game, reimagined</p>
+      <h1><span>Stone</span> <span>Paper</span> <span>Scissors</span></h1>
+      <p class="subtitle">Choose your move and beat the computer!</p>
+    </header>
+
+    <section class="scoreboard" aria-label="Scores">
+      <div class="score-card player-card">
+        <div class="avatar" aria-hidden="true">☺</div>
+        <div><p class="score-label">Your Score</p><p class="score" id="player-score">0</p></div>
+      </div>
+      <div class="score-card computer-card">
+        <div class="avatar" aria-hidden="true">🤖</div>
+        <div><p class="score-label">Computer Score</p><p class="score" id="computer-score">0</p></div>
+      </div>
+    </section>
+
+    <section class="choices" aria-label="Choose your move">
+      <button class="choice stone" data-choice="stone" aria-label="Choose stone">
+        <span class="choice-icon" aria-hidden="true">🪨</span><span class="choice-name">Stone</span>
+      </button>
+      <button class="choice paper" data-choice="paper" aria-label="Choose paper">
+        <span class="choice-icon" aria-hidden="true">📄</span><span class="choice-name">Paper</span>
+      </button>
+      <button class="choice scissors" data-choice="scissors" aria-label="Choose scissors">
+        <span class="choice-icon" aria-hidden="true">✂️</span><span class="choice-name">Scissors</span>
+      </button>
+    </section>
+
+    <section class="result-panel" aria-live="polite">
+      <p class="round-label" id="round-label">READY TO PLAY?</p>
+      <h2 id="result-title">Make your move!</h2>
+      <p id="result-message">Choose stone, paper or scissors to start the game.</p>
+      <div class="round-moves" id="round-moves"></div>
+    </section>
+
+    <div class="actions">
+      <button id="reset-button" class="reset-button" type="button">↻ Reset score</button>
+    </div>
+    <footer>Made with <span aria-label="love">♥</span> using HTML, CSS &amp; JavaScript</footer>
+  </main>
+</body>
+</html>
